@@ -15,7 +15,7 @@ const Sidebar = ({ onLogout }) => {
   ];
 
   return (
-    <aside className="bg-gradient-to-br from-blue-900 via-blue-700 to-green-700 text-white w-56 min-h-[90vh] max-h-[95vh] p-6 flex flex-col shadow-xl rounded-2xl">
+    <aside className="fixed top-0 left-0 h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-green-700 text-white w-64 p-6 flex flex-col shadow-xl rounded-r-2xl z-50">
       <div className="text-2xl font-extrabold mb-8 tracking-wide text-center">🌊 Marine Portal</div>
       <nav className="flex-1">
         <ul>

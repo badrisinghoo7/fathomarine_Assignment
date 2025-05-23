@@ -18,7 +18,7 @@ const Dashboard = () => {
   return (
     <div className="flex min-h-screen bg-gradient-to-br from-blue-100 to-blue-300">
       <Sidebar onLogout={handleLogout} />
-      <main className="flex-1 p-8 md:p-16">
+      <main className="flex-1 p-8 md:p-16 ml-64">
         <WelcomeCard />
         <DummyCards />
         <MarineData />
