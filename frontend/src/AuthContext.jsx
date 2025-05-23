@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8080/api/login', { email, password });
+      const res = await axios.post('https://fathomarine-assignment.onrender.com/api/login', { email, password });
       setUser(res.data.user);
       setToken(res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
   const signup = async (name, email, password) => {
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:8080/api/signup', { name, email, password });
+      const res = await axios.post('https://fathomarine-assignment.onrender.com/api/signup', { name, email, password });
       setUser(res.data.user);
       setToken(res.data.token);
       localStorage.setItem('user', JSON.stringify(res.data.user));
