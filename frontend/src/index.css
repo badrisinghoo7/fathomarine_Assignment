@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+/* Custom animation for fade-in */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.7s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* General body and font improvements for Tailwind UI */
+body {
+  @apply bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen text-slate-800 antialiased;
+}
+
+/* Remove default margin/padding for root elements */
+#root {
+  @apply min-h-screen;
+}
+
+/* Utility for card look if not using Tailwind classes directly */
+.card {
+  @apply bg-white rounded-2xl shadow-lg p-8;
+}
