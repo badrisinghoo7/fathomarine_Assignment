@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar'; // This is now your Navbar
 import WelcomeCard from './WelcomeCard';
 import DummyCards from './DummyCards';
 import MarineData from './MarineData';
@@ -16,9 +16,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-blue-100 to-blue-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col">
       <Sidebar onLogout={handleLogout} />
-      <main className="flex-1 p-8 md:p-16 ml-64">
+      <main className="flex-1 p-8 md:p-16">
         <WelcomeCard />
         <DummyCards />
         <MarineData />

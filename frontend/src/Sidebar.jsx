@@ -15,29 +15,29 @@ const Sidebar = ({ onLogout }) => {
   ];
 
   return (
-    <aside className="fixed top-0 left-0 h-screen bg-gradient-to-br from-blue-900 via-blue-700 to-green-700 text-white w-64 p-6 flex flex-col shadow-xl rounded-r-2xl z-50">
-      <div className="text-2xl font-extrabold mb-8 tracking-wide text-center">🌊 Marine Portal</div>
-      <nav className="flex-1">
-        <ul>
-          {navLinks.map(link => (
-            <li key={link.to} className={location.pathname === link.to ? 'font-bold' : ''}>
-              <Link
-                to={link.to}
-                className="block py-2 px-2 rounded hover:bg-blue-800 transition text-base"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <nav className="w-full bg-green-700 text-white flex items-center px-8 py-4 shadow-lg">
+      <div className="text-xl font-extrabold mr-8 flex-shrink-0">🌊 Marine Portal</div>
+      <ul className="flex flex-1 space-x-6">
+        {navLinks.map(link => (
+          <li key={link.to}>
+            <Link
+              to={link.to}
+              className={`px-3 py-2 rounded hover:bg-green-800 transition text-base ${
+                location.pathname === link.to ? 'bg-green-800 font-bold' : ''
+              }`}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
       <button
         onClick={onLogout}
-        className="mt-8 bg-white text-blue-800 font-bold py-2 rounded shadow hover:bg-blue-100 transition"
+        className="ml-8 bg-white text-green-800 font-bold py-2 px-4 rounded shadow hover:bg-green-100 transition"
       >
         Logout
       </button>
-    </aside>
+    </nav>
   );
 };
 
