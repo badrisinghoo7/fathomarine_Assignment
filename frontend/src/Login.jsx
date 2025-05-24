@@ -21,10 +21,10 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-100 via-green-200 to-green-300">
+    <div className="min-h-screen flex items-center justify-center bg-green-200">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-sm bg-white rounded-xl shadow p-6"
+        className="w-full max-w-md bg-white rounded-xl shadow p-8"
       >
         <h2 className="text-2xl font-bold text-green-900 mb-6 text-center">Sign In</h2>
         {error && (
