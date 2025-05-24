@@ -28,6 +28,8 @@ const Login = () => {
       >
         <h2 className="text-2xl font-bold text-green-900 mb-6 text-center">Sign In</h2>
         {error && (
+
+          
           <div className="mb-4 text-center bg-red-100 text-red-700 py-2 px-3 rounded">
             {error}
           </div>
